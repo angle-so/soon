@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body ::selection {
-  background: #61dafb;
-  color: #000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap');
 
 @font-face {
   font-family: 'Biotif';
@@ -50,4 +47,13 @@ body ::selection {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+body ::selection {
+  background: #61dafb;
+  color: #000;
+}
+
+body {
+  font-family: 'Biotif', 'Inter', sans-serif;
 }

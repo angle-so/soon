@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import styles from "../styles/Index.module.css";
 
 export default function Home() {
  
@@ -15,7 +15,6 @@ export default function Home() {
 
       const isProd = process.env.NODE_ENV === 'production';
       const base = isProd ? 'https://angle.so' : 'http://localhost:3000';
-
 
       await fetch(`${base}/api/save`, {
         method: 'POST',
@@ -48,33 +47,28 @@ export default function Home() {
       </Head>
       <div>
         <div className="absolute w-full">
-          <nav className="max-w-6xl mx-auto px-6 flex-col items-center justify-between mt-6 mb-4">
+          <nav className="max-w-6xl mx-auto px-6 mt-12 mb-4 flex-col items-center justify-center text-center">
             <a href="/">
-            <img src="/static/logo.svg" alt="React Email" className="h-8" />
-
+              <div className="flex flex-row justify-center">
+                <img src="/static/logo.svg" alt="React Email" className="h-10" />
+              </div>
             </a>
-            
           </nav>
         </div>
       </div>
       <div className="flex min-h-screen flex-col justify-center">
         <div className="mx-auto max-w-5xl items-center justify-center">
           <div className="flex flex-col text-center px-4">
-            <p className="text-gray-10 text-sm font-medium uppercase mb-4">
-              Coming Soon
-            </p>
-            <h1 className="text-gray-12 text-5xl font-bold mb-6">
+            <h1 className="text-gray-12 text-7xl font-extrabold mb-1">
               Join the Waitlist.
             </h1>
-            <p className="text-gray-11 text-lg mb-6">
+            <p className="text-gray-11 text-2xl mb-8 font-medium">
             Be one of the first ones to try the next-gen email experience.
             </p>
-            <form className="flex gap-2 mx-auto" onSubmit={onFormSubmit}>
-              <input type="email" name="email" placeholder="you@example.com" className="outline-none bg-gray-3 hover:bg-gray-4 focus:bg-gray-4 w-44 text-sm px-4 h-10 rounded-xl " required />
-              <button className="box-border outline-none self-center relative w-32 inline-flex items-center justify-center rounded-xl transition hover:scale-110 hover:-rotate-2 active:bg-indigo-500 focus:outline-none focus:ring" disabled={isSaving}>
-                <img src="/static/submit.svg" alt="submit Icon" className="absolute left-0 ml-4" />
-                
-  
+            <form className="flex flex-row justify-center items-center" onSubmit={onFormSubmit}>
+              <input type="email" name="email" placeholder="Email" className={["w-2/5 outline-none bg-gray-3 hover:bg-gray-4 focus:bg-gray-4 text-sm px-4 h-10 rounded-2xl", styles.email].join(" ")} required />
+              <button className="ml-3 rounded-2xl outline-none flex items-center justify-center bg-gray-3 hover:bg-gray-4 p-2" disabled={isSaving}>
+                  <img src="/static/submit.svg" className='block scale-75' alt="Submit Icon" />
               </button>
             </form>
           </div>

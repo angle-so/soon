@@ -68,10 +68,6 @@ module.exports = {
           1: '#61dafb' // Original React.js color
         }
       },
-      fontFamily: {
-        sans: ['Biotif', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
-      }
     },
   },
   plugins: [],
