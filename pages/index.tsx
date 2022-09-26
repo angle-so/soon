@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   const title = 'Angle Mail';
-  const description = 'Next-gen email client .';
+  const description = 'Next-gen email client';
 
   return (
     <>
@@ -46,6 +46,8 @@ export default function Home() {
         <meta content="https://angle.so" property="og:url" />
       </Head>
       <main>
+      <img src='/static/icons/violet_blur.svg' alt="Backdrop" className='absolute h-screen w-screen' /> 
+
         <div>
           <div className="absolute w-full">
             <nav className="max-w-6xl mx-auto px-6 mt-12 mb-4 flex-col items-center justify-center text-center">
@@ -58,9 +60,6 @@ export default function Home() {
           </div>
         </div>
         <div className="flex min-h-screen flex-col justify-center relative">
-          <div className='absolute h-screen w-screen'>
-            <img src='/static/icons/violet_blur.svg' alt="Backdrop" className='block h-full w-full' /> 
-          </div>
           <div className="mx-auto max-w-5xl items-center justify-center">
             <div className="flex flex-col text-center px-4">
               <h1 className="text-gray-12 text-7xl font-extrabold mb-1">
