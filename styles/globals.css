@@ -45,11 +45,22 @@
   font-display: swap;
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0E0E0E;
+}
+
+/* This helps in color of the selected parts */
 body ::selection {
   background: #61dafb;
   color: #000;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-}
