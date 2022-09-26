@@ -51,13 +51,16 @@ export default function Home() {
             <nav className="max-w-6xl mx-auto px-6 mt-12 mb-4 flex-col items-center justify-center text-center">
               <a href="/">
                 <div className="flex flex-row justify-center">
-                  <img src="/static/logo.svg" alt="React Email" className="h-10" />
+                  <img src="/static/icons/logo.svg" alt="React Email" className="h-10" />
                 </div>
               </a>
             </nav>
           </div>
         </div>
-        <div className="flex min-h-screen flex-col justify-center">
+        <div className="flex min-h-screen flex-col justify-center relative">
+          <div className='absolute h-screen w-screen'>
+            <img src='/static/icons/violet_blur.svg' alt="Backdrop" className='block h-full w-full' /> 
+          </div>
           <div className="mx-auto max-w-5xl items-center justify-center">
             <div className="flex flex-col text-center px-4">
               <h1 className="text-gray-12 text-7xl font-extrabold mb-1">
@@ -69,7 +72,7 @@ export default function Home() {
               <form className="flex flex-row justify-center items-center" onSubmit={onFormSubmit}>
                 <input type="email" name="email" placeholder="Email" className={["w-2/5 outline-none bg-gray-3 hover:bg-gray-4 focus:bg-gray-4 text-sm px-4 h-10 rounded-2xl", styles.email].join(" ")} required />
                 <button className="ml-3 rounded-2xl outline-none flex items-center justify-center bg-gray-3 hover:bg-gray-4 p-2" disabled={isSaving}>
-                    <img src="/static/submit.svg" className='block scale-75' alt="Submit Icon" />
+                    <img src="/static/icons/submit.svg" className='block scale-75' alt="Submit Icon" />
                 </button>
               </form>
             </div>
