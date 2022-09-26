@@ -5,18 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap');
 
 @font-face {
-  font-family: 'Biotif';
-  src: url('/static/fonts/Biotif-Regular.woff2') format('woff2'),
-    url('/static/fonts/Biotif-Regular.woff') format('woff');
+  font-family: 'Inter';
+  src: url('/static/fonts/Inter-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Biotif';
-  src: url('/static/fonts/Biotif-Book.woff2') format('woff2'),
-    url('/static/fonts/Biotif-Book.woff') format('woff');
+  font-family: 'Inter';
+  src: url('/static/fonts/Inter-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,17 +22,15 @@
 
 @font-face {
   font-family: 'Biotif';
-  src: url('/static/fonts/Biotif-SemiBold.woff2') format('woff2'),
-    url('/static/fonts/Biotif-SemiBold.woff') format('woff');
+  src: url('/static/fonts/Inter-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Biotif';
-  src: url('/static/fonts/Biotif-Bold.woff2') format('woff2'),
-    url('/static/fonts/Biotif-Bold.woff') format('woff');
+  font-family: 'Inter';
+  src: url('/static/fonts/Inter-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -55,5 +51,5 @@ body ::selection {
 }
 
 body {
-  font-family: 'Biotif', 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
