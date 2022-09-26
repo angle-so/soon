@@ -69,9 +69,9 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Biotif', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
-      }
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,14 @@
+.email {
+  background-image: url('/static/icons/mail.svg');
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 5px 0 0 48px;
+}
+
+.backdrop {
+  position: absolute;
+}
+
+.violet_backdrop {
+
+}
