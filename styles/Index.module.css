@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
 .email {
-  background-image: url('/static/icons/mail.svg');
-  background-repeat: no-repeat;
+  background: url('/static/icons/mail.svg') no-repeat left;
   background-position: 10px;
   padding: 5px 0 0 48px;
+  background-color: hsl(241 5.0% 14.3%);
+  font-family: 'Inter';
+  src: url('/static/fonts/Inter-Regular.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  z-index: 3;
 }
 
 .backdrop {
@@ -10,5 +18,5 @@
 }
 
 .violet_backdrop {
-
+    position: absolute;
 }
