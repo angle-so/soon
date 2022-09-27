@@ -69,7 +69,7 @@ export default function Home() {
               Be one of the first ones to try the next-gen email experience.
               </p>
               <form className="flex flex-row justify-center items-center" onSubmit={onFormSubmit}>
-                <input type="email" name="email" placeholder="Email" className={["w-2/5 outline-none bg-gray-3 hover:bg-gray-4 focus:bg-gray-4 text-sm px-4 h-10 rounded-2xl", styles.email].join(" ")} required />
+                <input type="email" name="email" placeholder="Email" className={["w-2/5 outline-none bg-gray-3 hover:bg-gray-4 focus:bg-gray-4 text-sm px-4 h-10 rounded-2xl", styles.email].join(" ")} required autocomplete="off"/>
                 <button className="ml-3 rounded-2xl outline-none flex items-center justify-center bg-gray-3 hover:bg-gray-4 p-2" disabled={isSaving}>
                     <img src="/static/icons/submit.svg" className='block scale-75' alt="Submit Icon" />
                 </button>
