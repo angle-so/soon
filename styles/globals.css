@@ -61,7 +61,7 @@ body {
 
 /* This helps in color of the selected parts */
 body ::selection {
-  background: #61dafb;
+  background: #0070E2;
   color: #000;
 }
 
