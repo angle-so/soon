@@ -56,11 +56,12 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #0E0E0E;
+  overflow: hidden;
 }
 
 /* This helps in color of the selected parts */
 body ::selection {
-  background: #61dafb;
+  background: #0070E2;
   color: #000;
 }
 
