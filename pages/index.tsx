@@ -1,33 +1,45 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import { useToasts } from 'react-toast-notifications'
+
 import styles from '../styles/Index.module.css'
 import supabase from '../utils/supabase'
 
 const Home = () => {
   const [email, setEmail] = useState('')
-  const [isSaving, setIsSaving] = useState(false)
+  const { addToast } = useToasts()
 
   const uploadData = async (userEmail) => {
-    const { data, error } = await supabase
-      .from('subscribers')
-      .insert([{ email: userEmail }])
+    try {
+      const { data, error } = await supabase
+        .from('subscribers')
+        .insert([{ email: userEmail }])
 
-    console.log({ data, error })
+      console.log(data, error)
+
+      if (data) {
+        addToast('Successfully added to waitlist', {
+          appearance: 'success',
+          autoDismiss: false,
+        })
+      } else {
+        addToast('Error adding to waitlist. Try again later.', {
+          appearance: 'error',
+          autoDismiss: false,
+        })
+      }
+    } catch (e) {
+      addToast('Error adding to waitlist. Try again later.', {
+        appearance: 'error',
+        autoDismiss: false,
+      })
+    }
   }
 
-  const onFormSubmit = async (e) => {
-    try {
-      e.preventDefault()
-      setIsSaving(true)
-
-      console.log('Saved ', email)
-      uploadData(email)
-    } catch (e) {
-      alert('Something went wrong, try again later.')
-    } finally {
-      setEmail('')
-      setIsSaving(false)
-    }
+  const onFormSubmit = (e) => {
+    e.preventDefault()
+    uploadData(email)
+    setEmail('')
   }
 
   const title = 'Angle Mail'
