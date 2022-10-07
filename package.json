@@ -11,13 +11,12 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
-    "@supabase/supabase-js": "^1.35.7",
+    "@supabase/supabase-js": "^1.35.6",
     "klotty": "^0.7.1",
     "lottie-react": "^2.3.1",
     "next": "12.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-toast-notifications": "^2.5.1"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.19.1",
